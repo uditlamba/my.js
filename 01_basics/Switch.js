@@ -36,7 +36,7 @@ switch (month) {
     case 9:
         console.log("Sept");
         break;
-
+ 
     default:
         console.log("Use default case");
         break;
