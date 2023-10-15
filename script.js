@@ -1,13 +1,22 @@
-const sayHitesh = function(){
-    console.log("Udit Lamba");
-}
-const changeText = function(){
-    document.querySelector('h2').innerHTML = "Software Developer"
-}
+const requesturl='https://api.github.com/users/hiteshchoudhary'
+const xhr=new XMLHttpRequest();
+xhr.open("GET",requesturl)
+xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    
+    if(xhr.readyState===4){
+        const data=JSON.parse(this.responseText)
+        console.log(typeof data);
+        console.log(data);
+        console.log(data.followers);
+        console.log(data.photo);
+   
+    document.addEventListener('click',function(){
+        document.querySelector('p').innerHTML=data.followers
+    })   
 
-const changeMe = setTimeout(changeText, 2000)
+    }
+}
+// console.log(xhr.readyState);
+xhr.send()
 
-document.querySelector('#Stop').addEventListener('click', function(){
-    clearTimeout(changeMe)
-    console.log("STOPPED")
-})
