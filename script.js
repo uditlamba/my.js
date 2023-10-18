@@ -1,22 +1,20 @@
-const requesturl='https://api.github.com/users/hiteshchoudhary'
-const xhr=new XMLHttpRequest();
-xhr.open("GET",requesturl)
-xhr.onreadystatechange=function(){
-    console.log(xhr.readyState);
-    
-    if(xhr.readyState===4){
-        const data=JSON.parse(this.responseText)
-        console.log(typeof data);
-        console.log(data);
-        console.log(data.followers);
-        console.log(data.photo);
-   
-    document.addEventListener('click',function(){
-        document.querySelector('p').innerHTML=data.followers
-    })   
+// let ctitle=document.getElementsByClassName('card-title')[0]
+// ctitle.style.h5="redn"
 
-    }
-}
-// console.log(xhr.readyState);
-xhr.send()
+// let ctitles=document.quarySelectorAll()
+// let id1=document.getElementById('id1')
+// console.log(id1)
+// console.log(id1.matches(".box"))
+// console.log(id2.matches(".box"))
+// console.log(sp1.closest("#id1"))
+// console.log(sp1.closest(".box1"))
+// console.log(id1.contains(sp1))
+// console.log(sp1.contains(id1))
+
+
+let A=document.getElementsByTagName("li")[1]
+A.style.color="red"
+let B=document.querySelectorAll("#we")[0]
+B.style.color="green"
+
 
